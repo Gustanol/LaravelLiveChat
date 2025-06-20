@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
- import echo from '../utils/echo'; 
+import echo from '../utils/echo'; 
 
 export default function SimpleChat() {
   const [messages, setMessages] = useState([]);

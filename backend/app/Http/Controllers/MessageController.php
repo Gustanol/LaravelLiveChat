@@ -27,4 +27,9 @@ class MessageController extends Controller
     
     return response()->json($message, 201);
   }
+  
+  public function store(Request $req) {
+    \Log::info('Recebendo POST:', $req->all());
+    ...
+  }
 }
