@@ -2,9 +2,9 @@
 
 return [
 
-    'paths' => ['api/*', 'sanctum/csrf-cookie'],
+    'paths' => ['*'],
 
-    'allowed_methods' => ['https://laravel-live-chat.vercel.app'],
+    'allowed_methods' => ['*'],
 
     'allowed_origins' => ['*'],
 
