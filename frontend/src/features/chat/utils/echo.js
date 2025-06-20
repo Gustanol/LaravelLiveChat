@@ -7,9 +7,9 @@ window.Pusher = Pusher
 const echo = new Echo({
   broadcaster: 'pusher',
   key: 'base64:IV08o1yU7BGPbwulB/S5lLyfFNAWBKS1ggvcVHviV2E=',
-  wsHost: '216.24.57.4',
+  wsHost: 'soketiserver.onrender.com',
   wsPort: 6001,
-  forceTLS: true,
+  forceTLS: false,
   disableStats: true,
   enabledTransports: ['ws', 'wss'],
   cluster: 'mt1' 
