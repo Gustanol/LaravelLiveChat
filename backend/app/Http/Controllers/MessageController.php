@@ -9,6 +9,7 @@ use App\Events\MessageSent;
 class MessageController extends Controller
 {
   public function index() {
+    Log::info('Recebendo POST:', $req->all());
     $messages = Message::orderBy('created_at', 'asc')->get();
     return response()->json($messages);
   }
@@ -27,9 +28,5 @@ class MessageController extends Controller
     broadcast(new MessageSent($message))->toOthers();
     
     return response()->json($message, 201);
-  }
-  
-  public function store(Request $req) {
-    \Log::info('Recebendo POST:', $req->all());
   }
 }
