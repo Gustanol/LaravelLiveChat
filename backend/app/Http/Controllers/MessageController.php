@@ -31,6 +31,5 @@ class MessageController extends Controller
   
   public function store(Request $req) {
     \Log::info('Recebendo POST:', $req->all());
-    ...
   }
 }
