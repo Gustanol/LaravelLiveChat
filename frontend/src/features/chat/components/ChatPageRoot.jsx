@@ -28,7 +28,7 @@ export default function SimpleChat() {
 
   const loadMessages = async () => {
     try {
-      const response = await fetch('https://laravelchat.onrender.com/api/messages');
+      const response = await fetch('https://laravelchat.onrender.com/messages');
       const data = await response.json();
       setMessages(data);
     } catch (error) {
@@ -53,7 +53,7 @@ export default function SimpleChat() {
     if (inputText.trim() && username.trim()) {
       setIsLoading(true);
       try {
-        const response = await fetch('https://laravelchat.onrender.com/api/messages', {
+        const response = await fetch('https://laravelchat.onrender.com/messages', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
