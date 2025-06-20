@@ -9,7 +9,8 @@ use App\Events\MessageSent;
 class MessageController extends Controller
 {
   public function index() {
-    return Message::orderBy('created_at', 'asc')->get();
+    $messages = Message::orderBy('created_at', 'asc')->get();
+    return response()->json($messages);
   }
   
   public function store(Request $req) {
